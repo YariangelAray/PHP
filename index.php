@@ -6,10 +6,14 @@
   <li><a href="01-basico/constantes.php">Constantes</a></li>
   <li><a href="01-basico/arrays.php">Arrays</a></li>
   <li><a href="01-basico/concatenacion.php">Concatenación</a></li>
-  <li><a href="01-basico/operadores_aritmeticos.php">Operadores Aritméticos</a></li>
+  <li><a href="01-basico/operadores-aritmeticos.php">Operadores Aritméticos</a></li>
   <li><a href="01-basico/asignacion.php">Operadores de Asignacion</a></li>
   <li><a href="01-basico/asignacion-referencia.php">Asignacion por Referencia</a></li>
   <li><a href="01-basico/operadores-comparacion.php">Operadores de Comparación</a></li>
   <li><a href="01-basico/operadores-logicos.php">Operadores Lógicos</a></li>
+  <li><a href="01-basico/operadores-increment-decrement.php">Operadores Incremento y Decremento</a></li>
+  <li><a href="01-basico/condicionales-simples.php">Condicionales Simples</a></li>
+  <li><a href="01-basico/condicionales-dobles.php">Condicionales Dobles</a></li>
+  <li><a href="01-basico/condicionales-anidadas.php">Condicionales Anidadas</a></li>
+  <li><a href="01-basico/condicionales-switch-case.php">Condicionales Switch-Case</a></li>
 </ul>
-
