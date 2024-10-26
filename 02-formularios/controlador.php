@@ -5,6 +5,7 @@ $nombre = "";
 $apellido = "";
 $edad = "";
 $telefono = "";
+$gustos = $_REQUEST['gustos'] ?? [];
 $errores = [];
 
 
@@ -20,7 +21,7 @@ if(isset($_REQUEST['edad']) && empty($_REQUEST['edad'])){
 if(isset($_REQUEST['telefono']) && empty($_REQUEST['telefono'])){
   array_push($errores, "El campo telefono es requerido");
 }
-if (count($_REQUEST['gustos']) < 2 ){
+if (count($gustos) < 2 || empty($gustos)){
   array_push($errores, "El campo de gustos es requerido, mínimo con dos campos.");
 }
 
@@ -41,6 +42,7 @@ else{
   echo "Su nombre es: ".$_REQUEST['nombre']."<br>";
   echo "Su apellido es: ".$_REQUEST['apellido']."<br>";
   echo "Su edad es: ".$_REQUEST['edad']."<br>";
-  echo "Su telefono es: ".$_REQUEST['telefono'];
+  echo "Su telefono es: ".$_REQUEST['telefono']."<br>";
+  echo "Sus gustos son: ".implode(", ", $gustos); //Hace que los campos esten separados por como se le indica
 }
 ?>
