@@ -17,4 +17,7 @@
   <li>
     <a href="palabra-sin-vocales.php">Palabra sin vocales</a>
   </li>
+  <li>
+    <a href="funciones_string.php">Funciones String</a>
+  </li>
 </ul>
