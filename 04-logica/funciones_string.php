@@ -24,7 +24,14 @@ $frase = "hola ADSS 22";
 // $exp = "/[A-Z]{4}/";
 // $exp = "/[0-9]{2}/";
 $exp = "/([A-Z{4,}])\s([0-9]{2,})/";
-$respuesta = preg_match($exp, $frase); 
+//"/(?=.*[A-Z])(?=.*[0-9])/"
+// contraseña /^(?=.*[A-Z])(?=.*[0-9])(?=.*[\W_]).{8,}$/
+
+//(?= ...) es una verificación condicional que no consume caracteres y solo confirma si algo está presente. (para saber si está y ya, sin orden, o algo así)
+//(?: ...) agrupa partes de la expresión para poder aplicar repetición o alternación sin capturar el grupo. (se puede usar para ver si algo esta especificamente y cuantas veces está)
+$respuesta = preg_match($exp, $frase);
+
+
 
 if ($respuesta){
   echo "Su frase <b>SÍ</b> cumple";
