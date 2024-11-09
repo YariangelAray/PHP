@@ -43,6 +43,6 @@ else{
   echo "Su apellido es: ".$_REQUEST['apellido']."<br>";
   echo "Su edad es: ".$_REQUEST['edad']."<br>";
   echo "Su telefono es: ".$_REQUEST['telefono']."<br>";
-  echo "Sus gustos son: ".implode(", ", $gustos); //Hace que los campos esten separados por como se le indica
+  echo "Sus gustos son: ".implode(", ", $gustos); //Hace que los campos esten separados por como se le indica ", "
 }
 ?>
