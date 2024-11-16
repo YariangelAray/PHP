@@ -13,7 +13,7 @@
       </div>
      <div>
         <label for="archivo">Ingrese un archivo</label>
-        <input type="file" name="archivo" multiple>
+        <input type="file" name="archivo[]" multiple>
       </div>
       <button>Subir</button>
   </form>
