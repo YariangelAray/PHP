@@ -1,22 +1,25 @@
 <?php
 
-// require('conexion.php');
-// $db = new Conexion();
-// $conexion = $db->getConexion();
+require('conexion.php');
+$db = new Conexion();
+$conexion = $db->getConexion();
 
-// $sqlUsuario = "SELECT u.id_usuario, u.nombres, u.apellidos, u.correo, u.fecha_nacimiento, g.genero, c.ciudad FROM usuarios u INNER JOIN generos g ON u.id_genero = g.id_genero INNER JOIN ciudades c ON u.id_ciudad = c.id_ciudad ORDER BY u.id_usuario ASC";
-// $stm = $conexion->prepare($sqlUsuario);
-// $stm->execute();
-// $usuarios = $stm->fetchAll();
+$sqlUsuario = "SELECT u.id_usuario, u.nombres, u.apellidos, u.correo, u.fecha_nacimiento, g.genero, c.ciudad FROM usuarios u INNER JOIN generos g ON u.id_genero = g.id_genero INNER JOIN ciudades c ON u.id_ciudad = c.id_ciudad ORDER BY u.id_usuario ASC";
+$stm = $conexion->prepare($sqlUsuario);
+$stm->execute();
+$usuarios = $stm->fetchAll();
 
-// // echo "<pre>";
-// // print_r($usuarios);
-// // echo "</pre>";
+// echo "<pre>";
+// print_r($usuarios);
+// echo "</pre>";
 
-
+if (empty($usuarios)) {
+    echo "<h1>No hay registros que mostrar</h1>";
+}
+else{
 ?>
 
-<!-- <table border="1">
+<table border="1">
     <thead>
         <th>ID</th>
         <th>Nombres</th>
@@ -47,4 +50,12 @@
     }
     ?>
     </tbody>
-</table> -->
+</table>
+
+<?php
+}
+?>
+
+<a href="index.php">Volver al formulario</a>
+
+
