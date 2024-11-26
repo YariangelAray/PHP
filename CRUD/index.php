@@ -109,7 +109,7 @@ $lenguajes = $banderaLenguajes->fetchAll();
 
         <br>        
         <input type="submit" value="Enviar">
-        <a href="vistaUsuarios.php">Vista</a>
+        <a href="read.php">Vista</a>
     
     </fieldset>
 

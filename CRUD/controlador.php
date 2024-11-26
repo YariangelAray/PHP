@@ -52,7 +52,8 @@ foreach ($lenguajes as $key => $value) {
 
 
 
-echo "Formulario enviado con éxito.";
+header("Location: read.php");
+
 
 
 

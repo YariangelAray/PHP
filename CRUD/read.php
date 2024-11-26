@@ -19,6 +19,10 @@ if (empty($usuarios)) {
 else{
 ?>
 
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
 <table border="1">
     <thead>
         <th>ID</th>
@@ -43,8 +47,8 @@ else{
         <td><?=$value['fecha_nacimiento']?></td>
         <td><?=$value['genero']?></td>
         <td><?=$value['ciudad']?></td>
-        <td><a href="vistaEditar.php?id=<?=$value['id_usuario']?>"> Editar </a></td>
-        <td><a href="vistaEliminar.php?id=<?=$value['id_usuario']?>"> Eliminar </a></td>
+        <td><a href="editar.php?id=<?=$value['id_usuario']?>"> <i class='bx bxs-edit-alt'></i> </a></td>
+        <td><a href="delete.php?id=<?=$value['id_usuario']?>"> <i class='bx bxs-trash' ></i> </a></td>
     </tr>
         <?php
     }
@@ -56,6 +60,6 @@ else{
 }
 ?>
 
-<a href="index.php">Volver al formulario</a>
+<a href="index.php">Agregar nuevo usuario</a>
 
 

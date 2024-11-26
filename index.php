@@ -17,5 +17,6 @@
   <li><a href="01-basico/condicionales-anidadas.php">Condicionales Anidadas</a></li>
   <li><a href="01-basico/condicionales-switch-case.php">Condicionales Switch-Case</a></li>
   <li><a href="01-basico/bucle-while.php">Ciclo While</a></li>
+  <li><a href="CRUD/index.php">Formulario</a></li>
 
 </ul>

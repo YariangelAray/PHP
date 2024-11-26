@@ -27,16 +27,18 @@ $idUsuario = $_GET['id'];
 
 // Obtener la información del usuario
 
-$sqlUsuario = "SELECT * FROM usuarios WHERE id_usuario=$idUsuario";
+$sqlUsuario = "SELECT * FROM usuarios WHERE id_usuario=:id_usuario";
 $stm = $conexion->prepare($sqlUsuario);
+$stm -> bindParam(':id_usuario', $idUsuario);
 $stm->execute();
 $usuario = $stm->fetchAll();
 $usuario = $usuario[0];
 
 // Obtener los lenguajes que seleccionó el usuario
 
-$sqlUsuarioLeng = "SELECT * FROM lenguaje_usuario WHERE id_usuario=$idUsuario";
+$sqlUsuarioLeng = "SELECT * FROM lenguaje_usuario WHERE id_usuario=:id_usuario";
 $stm = $conexion->prepare($sqlUsuarioLeng);
+$stm -> bindParam(':id_usuario', $idUsuario);
 $stm->execute();
 $usuarioLeng = $stm->fetchAll();
 
@@ -55,13 +57,13 @@ foreach ($usuarioLeng as $key => $value) {
 
 ?>
 
-<form action="controlador2.php" method="post">
+<form action="update.php" method="post">
 
     <fieldset>
 
         <legend><h2>DATOS USUARIO: <?=$idUsuario?> </h2></legend>
 
-        <input type="text" name="id_usuario" value="<?=$idUsuario?>" style="display: none;">
+        <input type="hidden" name="id_usuario" value="<?=$idUsuario?>">
 
         <label for="nombre"> Nombre:
             <input type="text" id="nombre" name="nombre" placeholder="Nombre" value="<?=$usuario['nombres']?>">
@@ -146,7 +148,6 @@ foreach ($usuarioLeng as $key => $value) {
 
         <br>        
         <input type="submit" value="Enviar">
-        <a href="vistaUsuarios.php">Vista</a>
     
     </fieldset>
 
